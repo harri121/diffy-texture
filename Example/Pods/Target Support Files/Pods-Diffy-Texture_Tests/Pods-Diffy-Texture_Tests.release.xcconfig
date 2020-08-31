@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks" "${PODS_CONFIGURATION_BUILD_DIR}/Diffy-Texture" "${PODS_CONFIGURATION_BUILD_DIR}/Nimble" "${PODS_CONFIGURATION_BUILD_DIR}/Quick"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Diffy-Texture/Diffy_Texture.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Nimble/Nimble.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Quick/Quick.framework/Headers"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks" "${PODS_CONFIGURATION_BUILD_DIR}/Diffy-Texture" "${PODS_CONFIGURATION_BUILD_DIR}/Nimble" "${PODS_CONFIGURATION_BUILD_DIR}/PINCache" "${PODS_CONFIGURATION_BUILD_DIR}/PINOperation" "${PODS_CONFIGURATION_BUILD_DIR}/PINRemoteImage" "${PODS_CONFIGURATION_BUILD_DIR}/Quick" "${PODS_CONFIGURATION_BUILD_DIR}/Texture"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 $(inherited) AS_USE_ASSETS_LIBRARY=1 $(inherited) AS_USE_MAPKIT=1 $(inherited) AS_USE_PHOTOS=1 $(inherited) AS_USE_VIDEO=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Diffy-Texture/Diffy_Texture.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Nimble/Nimble.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/PINCache/PINCache.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/PINOperation/PINOperation.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/PINRemoteImage/PINRemoteImage.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Quick/Quick.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Texture/AsyncDisplayKit.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "Diffy_Texture" -framework "Nimble" -framework "Quick" -framework "XCTest" -weak_framework "XCTest"
+OTHER_LDFLAGS = $(inherited) -l"c++" -framework "AVFoundation" -framework "Accelerate" -framework "AssetsLibrary" -framework "AsyncDisplayKit" -framework "CoreLocation" -framework "CoreMedia" -framework "Diffy_Texture" -framework "Foundation" -framework "ImageIO" -framework "MapKit" -framework "Nimble" -framework "PINCache" -framework "PINOperation" -framework "PINRemoteImage" -framework "Photos" -framework "Quick" -framework "UIKit" -framework "XCTest" -weak_framework "UIKit" -weak_framework "XCTest"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

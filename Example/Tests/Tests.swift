@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import Diffy-Texture
+import Diffy_Texture
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {

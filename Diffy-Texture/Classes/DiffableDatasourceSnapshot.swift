@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DiffableDataSourceSnapshot <SectionIdentifierType, ItemIdentifierType>
+public struct DiffableDataSourceSnapshot <SectionIdentifierType, ItemIdentifierType>
 where SectionIdentifierType : Hashable, ItemIdentifierType : Hashable {
     
     struct Section: Hashable {

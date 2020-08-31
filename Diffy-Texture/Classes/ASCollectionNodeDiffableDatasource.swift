@@ -12,8 +12,8 @@ public class ASCollectionNodeDiffableDataSource<SectionIdentifierType, ItemIdent
     ASCollectionDataSource,
     ASCollectionDelegateFlowLayout where SectionIdentifierType : Hashable, ItemIdentifierType : Hashable {
     
-    typealias CellProvider = (ASCollectionNode, IndexPath, ItemIdentifierType) -> ASCellNode?
-    typealias SupplementaryNodeProvider = (ASCollectionNode, String, IndexPath) -> ASCellNode?
+    public typealias CellProvider = (ASCollectionNode, IndexPath, ItemIdentifierType) -> ASCellNode?
+    public typealias SupplementaryNodeProvider = (ASCollectionNode, String, IndexPath) -> ASCellNode?
     
     private var cellProvider: CellProvider?
     public var supplementaryNodeProvider: SupplementaryNodeProvider?

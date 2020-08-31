@@ -1,27 +1,72 @@
 PODS:
-  - Diffy-Texture (0.1.0)
+  - Diffy-Texture (0.1.0):
+    - Texture (~> 3.0)
   - Nimble (7.3.4)
+  - PINCache (3.0.1-beta.8):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.8)
+    - PINCache/Core (= 3.0.1-beta.8)
+  - PINCache/Arc-exception-safe (3.0.1-beta.8):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.8):
+    - PINOperation (~> 1.1.1)
+  - PINOperation (1.1.2)
+  - PINRemoteImage/Core (3.0.0):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0):
+    - PINCache (= 3.0.1-beta.8)
+    - PINRemoteImage/Core
   - Quick (1.2.0)
+  - Texture (3.0.0):
+    - Texture/AssetsLibrary (= 3.0.0)
+    - Texture/Core (= 3.0.0)
+    - Texture/MapKit (= 3.0.0)
+    - Texture/Photos (= 3.0.0)
+    - Texture/PINRemoteImage (= 3.0.0)
+    - Texture/Video (= 3.0.0)
+  - Texture/AssetsLibrary (3.0.0):
+    - Texture/Core
+  - Texture/Core (3.0.0)
+  - Texture/MapKit (3.0.0):
+    - Texture/Core
+  - Texture/Photos (3.0.0):
+    - Texture/Core
+  - Texture/PINRemoteImage (3.0.0):
+    - PINRemoteImage/iOS (~> 3.0.0)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (3.0.0):
+    - Texture/Core
 
 DEPENDENCIES:
   - Diffy-Texture (from `../`)
   - Nimble (~> 7.0)
   - Quick (~> 1.2.0)
+  - Texture (~> 3.0.0)
 
 SPEC REPOS:
   trunk:
     - Nimble
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
     - Quick
+    - Texture
 
 EXTERNAL SOURCES:
   Diffy-Texture:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Diffy-Texture: f991681f9929ceb7465f5e3a19d06c408aa9e2e2
+  Diffy-Texture: f611f747117a007f159ac3e9a4625fe6aff11bc5
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  PINCache: 534fd41d358d828dfdf227a0d327f3673a65e20b
+  PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
+  PINRemoteImage: e2b89e19fb6e77ffc099f9d9f3b3fe1745e3f9f9
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  Texture: 2f109e937850d94d1d07232041c9c7313ccddb81
 
-PODFILE CHECKSUM: 7841b787a43f85edaf3a1062dad47f11c34fe732
+PODFILE CHECKSUM: bcdc520275380d9e709382298fda30428cac6cb0
 
 COCOAPODS: 1.9.1

@@ -199,12 +199,20 @@ fi
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Diffy-Texture/Diffy_Texture.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Quick/Quick.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Diffy-Texture/Diffy_Texture.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Quick/Quick.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
