@@ -1,0 +1,22 @@
+{
+  "name": "Diffy-Texture",
+  "version": "0.1.0",
+  "summary": "A short description of Diffy-Texture.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Daniel Hariri/Diffy-Texture",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Daniel Hariri": "daniel.hariri@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Daniel Hariri/Diffy-Texture.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Diffy-Texture/Classes/**/*"
+}

@@ -1,0 +1,27 @@
+PODS:
+  - Diffy-Texture (0.1.0)
+  - Nimble (7.3.4)
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - Diffy-Texture (from `../`)
+  - Nimble (~> 7.0)
+  - Quick (~> 1.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  Diffy-Texture:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Diffy-Texture: f991681f9929ceb7465f5e3a19d06c408aa9e2e2
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: 7841b787a43f85edaf3a1062dad47f11c34fe732
+
+COCOAPODS: 1.9.1

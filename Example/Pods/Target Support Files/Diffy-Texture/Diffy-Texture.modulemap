@@ -1,0 +1,6 @@
+framework module Diffy_Texture {
+  umbrella header "Diffy-Texture-umbrella.h"
+
+  export *
+  module * { export * }
+}
