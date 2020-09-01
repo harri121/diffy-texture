@@ -12,8 +12,8 @@ where SectionIdentifierType : Hashable, ItemIdentifierType : Hashable {
     
     public struct Section: Hashable {
         
-        var identifier: SectionIdentifierType
-        var items: [ItemIdentifierType]
+        public var identifier: SectionIdentifierType
+        public var items: [ItemIdentifierType]
         
         public init(identifier: SectionIdentifierType) {
             self.identifier = identifier
