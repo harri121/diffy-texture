@@ -25,7 +25,7 @@ where SectionIdentifierType : Hashable, ItemIdentifierType : Hashable {
         }
     }
     
-    private(set) var sections: [Section] = []
+    public private(set) var sections: [Section] = []
     
     public var numberOfSections: Int {
         return sections.count

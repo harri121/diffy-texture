@@ -21,7 +21,7 @@ public class ASCollectionNodeDiffableDataSource<SectionIdentifierType, ItemIdent
     private var currentSnapshot = DiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType>()
     private let collectionNode: ASCollectionNode
     
-    init(collectionNode: ASCollectionNode,
+    public init(collectionNode: ASCollectionNode,
          cellProvider: @escaping CellProvider) {
         self.collectionNode = collectionNode
         super.init()
