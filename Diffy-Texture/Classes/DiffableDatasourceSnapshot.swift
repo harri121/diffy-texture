@@ -10,17 +10,17 @@ import Foundation
 public struct DiffableDataSourceSnapshot <SectionIdentifierType, ItemIdentifierType>
 where SectionIdentifierType : Hashable, ItemIdentifierType : Hashable {
     
-    struct Section: Hashable {
+    public struct Section: Hashable {
         
         var identifier: SectionIdentifierType
         var items: [ItemIdentifierType]
         
-        init(identifier: SectionIdentifierType) {
+        public init(identifier: SectionIdentifierType) {
             self.identifier = identifier
             self.items = []
         }
      
-        func hash(into hasher: inout Hasher) {
+        public func hash(into hasher: inout Hasher) {
             hasher.combine(identifier)
         }
     }
