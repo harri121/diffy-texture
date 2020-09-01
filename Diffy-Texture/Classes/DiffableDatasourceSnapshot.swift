@@ -31,6 +31,8 @@ where SectionIdentifierType : Hashable, ItemIdentifierType : Hashable {
         return sections.count
     }
 
+    public init() {}
+    
     public func numberOfItems(inSection identifier: SectionIdentifierType) -> Int {
         guard let index = indexOfSection(identifier) else { return 0 }
         return sections[index].items.count
