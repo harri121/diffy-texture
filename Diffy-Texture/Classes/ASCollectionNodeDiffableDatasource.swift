@@ -41,7 +41,6 @@ public class ASCollectionNodeDiffableDataSource<SectionIdentifierType, ItemIdent
         
         let oldSnapshot = currentSnapshot
         let newSnapshot = snapshot
-        self.currentSnapshot = newSnapshot
         
         let sectionsDiff = newSnapshot.sections.difference(from: oldSnapshot.sections)
         
@@ -68,12 +67,13 @@ public class ASCollectionNodeDiffableDataSource<SectionIdentifierType, ItemIdent
             let newItems = newSnapshot.itemIdentifiers(inSection: section.identifier)
             let oldItems = oldSnapshot.itemIdentifiers(inSection: section.identifier)
             let itemsDiff = newItems.difference(from: oldItems)
-            let sectionIndex = newSnapshot.indexOfSection(section.identifier) ?? 0
+            let sectionOldIndex = oldSnapshot.indexOfSection(section.identifier) ?? 0
+            let sectionNewIndex = newSnapshot.indexOfSection(section.identifier) ?? 0
             
             let itemsDeletions = itemsDiff.compactMap { element -> IndexPath? in
                 switch element {
                 case .remove(let offset, _, _):
-                    return IndexPath(item: offset, section: sectionIndex)
+                    return IndexPath(item: offset, section: sectionOldIndex)
                 default:
                     return nil
                 }
@@ -82,7 +82,7 @@ public class ASCollectionNodeDiffableDataSource<SectionIdentifierType, ItemIdent
             let itemsInsertions = itemsDiff.compactMap { element -> IndexPath? in
                 switch element {
                 case .insert(let offset, _, _):
-                    return IndexPath(item: offset, section: sectionIndex)
+                    return IndexPath(item: offset, section: sectionNewIndex)
                 default:
                     return nil
                 }
@@ -94,6 +94,7 @@ public class ASCollectionNodeDiffableDataSource<SectionIdentifierType, ItemIdent
         
         if !animatingDifferences { UIView.setAnimationsEnabled(false) }
         collectionNode.performBatchUpdates({
+            self.currentSnapshot = newSnapshot
             collectionNode.deleteSections(IndexSet(sectionDeletions))
             collectionNode.insertSections(IndexSet(sectionInsertions))
             collectionNode.deleteItems(at: itemDeletions)
