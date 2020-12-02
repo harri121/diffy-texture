@@ -131,9 +131,13 @@ public class ASCollectionNodeDiffableDataSource<SectionIdentifierType, ItemIdent
         _ collectionNode: ASCollectionNode,
         nodeForSupplementaryElementOfKind kind: String,
         at indexPath: IndexPath) -> ASCellNode {
+        
+        let flowLayout = collectionNode.collectionViewLayout as? UICollectionViewFlowLayout
+        let isHorizontal = flowLayout?.scrollDirection == .horizontal
+        
         let backupCell = ASCellNode()
-        backupCell.style.width = ASDimension(unit: .fraction, value: 1.0)
-        backupCell.style.height = ASDimension(unit: .points, value: 40.0)
+        backupCell.style.width = ASDimension(unit: isHorizontal ? .points : .fraction, value: 1.0)
+        backupCell.style.height = ASDimension(unit: isHorizontal ? .fraction : .points, value: 1.0)
         return supplementaryNodeProvider?(collectionNode, kind, indexPath) ?? backupCell
     }
 }
